@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "AI",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,6 +11,7 @@
     "@mantine/rte": "^5.10.5",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.12.0",
+    "@mui/system": "^5.12.0",
     "@reduxjs/toolkit": "^1.9.3",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -46,7 +47,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "tsc --noEmit && eslint src/**/*.ts{,x} --cache --max-warnings=0",
+    "lint:fix": "eslint src/**/*.ts{,x} --fix"
   },
   "eslintConfig": {
     "extends": [
@@ -70,17 +73,5 @@
     "@types/draft-js": "^0.11.10"
   },
   "lint": "tsc --noEmit && eslint src/**/*.ts{,x} --cache --max-warnings=0",
-  "lint:fix": "eslint src/**/*.ts{,x} --fix",
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DakoMihailov/Futurepedia.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/DakoMihailov/Futurepedia/issues"
-  },
-  "homepage": "https://github.com/DakoMihailov/Futurepedia#readme"
+  "lint:fix": "eslint src/**/*.ts{,x} --fix"
 }

@@ -45,6 +45,8 @@
   },
   "rules": {
       "linebreak-style": "off",
+      "default-param-last": "off",
+      "@typescript-eslint/default-param-last": "warn",
       // Configure prettier
       "prettier/prettier": [
           "error",

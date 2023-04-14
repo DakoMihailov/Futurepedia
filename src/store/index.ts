@@ -1,18 +1,16 @@
-import { combineReducers } from "redux";
-import { configureStore } from "@reduxjs/toolkit";
-import languageReducer from "./reducers/languageReducer";
-import themeReducer from "./reducers/themeReducer";
-import authReducer from "./reducers/authReducer";
+import { combineReducers } from 'redux';
+import { configureStore } from '@reduxjs/toolkit';
+import languageReducer from './reducers/languageReducer';
+import themeReducer from './reducers/themeReducer';
 
 const rootReducer = combineReducers({
-  lang: languageReducer,
-  theme: themeReducer,
-  auth: authReducer,
+	lang: languageReducer,
+	theme: themeReducer,
 });
 
 const store = configureStore({
-  reducer: rootReducer,
-  devTools: process.env.NODE_ENV !== "production",
+	reducer: rootReducer,
+	devTools: process.env.NODE_ENV !== 'production',
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

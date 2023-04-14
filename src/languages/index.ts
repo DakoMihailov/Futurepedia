@@ -1,13 +1,13 @@
-import en from "./en.json";
-import ru from "./ru.json";
+import en from './en.json';
+import ru from './ru.json';
 
 export const translate = (key: string, language: string): string => {
-  let langData: { [key: string]: string } = {};
+	let langData: { [key: string]: string } = {};
 
-  if (language === "US") {
-    langData = en;
-  } else if (language === "RU") {
-    langData = ru;
-  }
-  return langData[key];
+	if (language === 'US') {
+		langData = en;
+	} else if (language === 'RU') {
+		langData = ru;
+	}
+	return langData[key];
 };
